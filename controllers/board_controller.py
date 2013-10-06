@@ -1,5 +1,5 @@
 from models.players.random_player import RandomPlayer
-from models.players.corner_player import CornerPlayer
+from models.players.score_player import ScorePlayer
 from views.console_board_view import ConsoleBoardView
 from models.board import Board
 
@@ -9,7 +9,7 @@ class BoardController:
     self.view  = ConsoleBoardView(self.board)
 
   def init_game(self):
-    self.white_player = CornerPlayer(Board.WHITE)
+    self.white_player = ScorePlayer(Board.WHITE)
     self.black_player = RandomPlayer(Board.BLACK)
     self.atual_player = self.white_player
 

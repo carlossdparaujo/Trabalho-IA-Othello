@@ -20,6 +20,7 @@ class CornerPlayer:
         dist  = math.sqrt(distX*distX + distY*distY)       
         if dist < minDist:
           minDist = dist
-          retMove = move 
+          retMove = move
+          
           
     return retMove
