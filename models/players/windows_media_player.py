@@ -1,4 +1,4 @@
-class WeightScorePlayer:
+class WindowsMediaPlayer:
   def __init__(self, color):
     self.color = color
     self.weight = [ 0, 0, 0, 0, 0, 0, 0 ,0 ,0 ,0,
