@@ -17,9 +17,8 @@ class WeightScorePlayer:
     return self.get_best_score(board)
 
   def get_best_score(self, board):
-    best_score = -1000
+    best_score = -float('inf')
     ret_move = None
-    self.print_moves(board)
     for move in board.valid_moves(self.color):
       test_board = board
       test_board.play(move, self.color)

@@ -1,5 +1,8 @@
 from models.players.corner_player import CornerPlayer
+from models.players.random_player import RandomPlayer
 from models.players.weight_score_player import WeightScorePlayer
+from models.players.score_player import ScorePlayer
+from models.players.minimax_score import MinimaxScorePlayer
 from views.console_board_view import ConsoleBoardView
 from models.board import Board
 
@@ -9,8 +12,8 @@ class BoardController:
     self.view  = ConsoleBoardView(self.board)
 
   def init_game(self):
-    self.white_player = WeightScorePlayer(Board.WHITE)
-    self.black_player = CornerPlayer(Board.BLACK)
+    self.white_player = MinimaxScorePlayer(Board.WHITE)
+    self.black_player = WeightScorePlayer(Board.BLACK)
     self.atual_player = self.white_player
 
     finish_game = 0
